@@ -23,9 +23,8 @@ const useStyles = makeStyles((theme) => ({
 export const Header = () => {
 
     const classes = useStyles();
-    const userContext = useContext(UserContext);
-
-    console.log('Header:userContext:',userContext);
+    const userContext = useContext(UserContext); // We're only reading Context here
+    const {user} = userContext; // Get the Thing from the Context.
 
     return (
         <AppBar className={classes.appBarContainer}>
@@ -35,7 +34,7 @@ export const Header = () => {
                 </Typography>
             </Toolbar>
             <TabBar/>
-            <ShowName>{userContext.user}</ShowName>
+            <ShowName>{user}</ShowName>
         </AppBar>
     )
 }

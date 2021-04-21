@@ -16,15 +16,13 @@ export const SetupUI = ({children}) => {
 
     const classes = useStyles();
 
+    // Handling of the data is done where the Provider resides.
+    // In this case, simple useState
     const [user, setUser] = useState('Bert');
-    const [contextData, setContextData] = useState({user: user, setUser: setUserFunction})
 
-    const setUserFunction = () => {
-        setUser('Piet');
-    }
-
+    // Both Thing and the function that sets the Thing are passed to the Provider in value.
     return (
-        <UserContext.Provider value={contextData}>
+        <UserContext.Provider value={{user, setUser}}>
             <Header/>
             <div className={classes.toolbar}/>
             {children}
