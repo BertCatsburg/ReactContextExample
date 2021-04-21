@@ -11,7 +11,7 @@ const Settings = () => {
     console.log('Settings:userContext:',userContext);
 
     const setNewUsername = () => {
-
+        console.log('Button Clicked!!!');
     }
 
     return (
