@@ -2,18 +2,23 @@ import React, {useContext} from 'react';
 import {UserContext} from "lib/usercontext";
 
 // *** UI
-import {Header} from 'ui';
+import {Header, Pagetitle, P, Button} from 'ui';
 
 
 const Settings = () => {
 
     const userContext = useContext(UserContext);
+    console.log('Settings:userContext:',userContext);
 
-    console.log();   // TODO   HIER GEBLEVEN.
+    const setNewUsername = () => {
+
+    }
+
     return (
         <React.Fragment>
-            <h1>Settings</h1>
-
+            <Pagetitle>Settings</Pagetitle>
+            <P>This is the Settings Page where you set a new Username</P>
+            <Button action={setNewUsername}>Set New Username</Button>
 
         </React.Fragment>
     )

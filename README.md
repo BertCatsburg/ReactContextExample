@@ -4,6 +4,7 @@ This small project should explain how React Context works.
 
 ## Technologies
 - NextJS
+- Material-UI  
 - React Context
 
 ## Functionality
