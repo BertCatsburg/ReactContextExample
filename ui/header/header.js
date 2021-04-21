@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {UserContext} from "lib/usercontext";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import {TabBar} from 'ui';
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -18,11 +20,19 @@ const useStyles = makeStyles((theme) => ({
 export const Header = () => {
 
     const classes = useStyles();
+    const userContext = useContext(UserContext);
+
+    console.log(userContext);
 
     return (
         <AppBar className={classes.appBarContainer}>
-            <Toolbar>React Context Test</Toolbar>
+            <Toolbar>
+                <Typography variant="body1">
+                    React Context Test
+                </Typography>
+            </Toolbar>
             <TabBar/>
+
         </AppBar>
     )
 }

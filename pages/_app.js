@@ -1,6 +1,7 @@
-import '../styles/globals.css'
+import React from 'react';
 import dynamic from "next/dynamic";
 import {SetupUI} from 'ui';
+
 
 function MyApp({Component, pageProps}) {
     return (
