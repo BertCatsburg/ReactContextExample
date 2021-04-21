@@ -1,10 +1,11 @@
 import React from 'react';
-import {Header} from 'ui';
+import {Header, Pagetitle, P} from 'ui';
 
 const Home = () => {
     return (
         <React.Fragment>
-            <h1>Home</h1>
+            <Pagetitle>Home</Pagetitle>
+            <P>Dummy homepage. Just notice the Header with the name on the right side. </P>
         </React.Fragment>
     )
 }
