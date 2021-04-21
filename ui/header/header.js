@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {TabBar} from 'ui';
 import {makeStyles} from '@material-ui/core/styles';
-
+import {ShowName} from "ui";
 
 const useStyles = makeStyles((theme) => ({
         appBarContainer: {
@@ -22,7 +22,7 @@ export const Header = () => {
     const classes = useStyles();
     const userContext = useContext(UserContext);
 
-    console.log(userContext);
+    console.log('Header:userContext:',userContext);
 
     return (
         <AppBar className={classes.appBarContainer}>
@@ -32,7 +32,7 @@ export const Header = () => {
                 </Typography>
             </Toolbar>
             <TabBar/>
-
+            <ShowName>{userContext.user}</ShowName>
         </AppBar>
     )
 }
