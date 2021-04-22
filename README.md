@@ -25,6 +25,9 @@ npm run dev
 
 ## How React Context works
 
+### Sources
+[This StackOverflow article](https://stackoverflow.com/questions/50502664/how-to-update-the-context-value-in-provider-from-the-consumer/50502829)
+
 ### userContext
 Check out /lib/userContext.js
 

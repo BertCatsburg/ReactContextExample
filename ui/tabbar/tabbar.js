@@ -22,7 +22,10 @@ export const TabBar = (props) => {
     const [value, setValue] = useState(0);
 
     const handleChange = (e, newValue) => {
-        // console.log(newValue);
+
+        console.log('TabBar:HandleChange:newValue:',newValue);
+        console.log('TabBar:HandleChange:e.target:',e.target.value);
+
         setValue(newValue);
     };
 
